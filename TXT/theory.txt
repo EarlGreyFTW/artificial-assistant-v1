@@ -1,0 +1,10 @@
+command words dict
+ - each row is numbered then list of command terms (commands.txt).
+ - loop through file until match found, then take line number
+ - goto separate dict (functions.txt), pair number to function
+ - function name = executable code
+
+e.g :
+Row 2 contains "time" and "what is"
+Row 2 = basic_1.time()
+exec(basic_1.time())

@@ -1,0 +1,4 @@
+1:basic_1.time()
+2:basic_1.date()
+3:basic_1.whoareyou()
+4:silly.fourtwo()

@@ -1,0 +1,3 @@
+eventually move terms dict to DB or even machine learning
+
+STT and TTS

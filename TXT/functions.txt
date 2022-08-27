@@ -1,0 +1,15 @@
+- TTS+Print
+- Debug text colour coded
+  - User input = Cyan
+  - Debug Titles = Yellow
+  - Debug Steps = Light green
+  - Output = light magenta
+
+basic 1 (system functions)
+  - time/date
+  - open applications
+
+internet 1
+  - all online interactions
+silly
+  - easter eggs and silly additions
