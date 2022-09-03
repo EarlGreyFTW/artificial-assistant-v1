@@ -1,4 +1,5 @@
-import colorama, pyttsx3, basic_1, internet_1, silly
+import colorama, pyttsx3, basic_1, internet_1, silly, pyaudio
+import speech_recognition as sr
 foreground = colorama.Fore
 tts = pyttsx3.init()
 
@@ -55,7 +56,11 @@ def execute(num):
 
 
 def cmd():
-    entry = str(input(" >> "))
+    input(foreground.LIGHTMAGENTA_EX + ">> Press Enter to activate Voice Input.")
+    initiate = sr.Recognizer()
+    with sr.Microphone() as source:
+        audio_data = initiate.record(source, duration=5)
+        entry = initiate.recognize_google(audio_data)
     if entry == "quit":
         quit("goodbye")
     else:
