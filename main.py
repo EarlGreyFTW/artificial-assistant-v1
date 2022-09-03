@@ -56,11 +56,14 @@ def execute(num):
 
 
 def cmd():
-    input(foreground.LIGHTMAGENTA_EX + ">> Press Enter to activate Voice Input.")
-    initiate = sr.Recognizer()
-    with sr.Microphone() as source:
-        audio_data = initiate.record(source, duration=5)
-        entry = initiate.recognize_google(audio_data)
+    a = input(foreground.LIGHTMAGENTA_EX + ">> Press Enter to activate Voice Input. Press T to switch to text input")
+    if a.lower() != "t":
+        initiate = sr.Recognizer()
+        with sr.Microphone() as source:
+            audio_data = initiate.record(source, duration=4)
+            entry = initiate.recognize_google(audio_data)
+    else:
+        entry = input(">> ")
     if entry == "quit":
         quit("goodbye")
     else:
